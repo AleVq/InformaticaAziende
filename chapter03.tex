@@ -1,0 +1,66 @@
+\chapter{Infrastruttura}
+\section{Introduzione}
+Parte dell'infrastruttura \`e hardware, questa sua concretezza implica che gli investimenti in tecnologia/infrastruttura sono pi\`u accettati (rispetto al software, che essendo astratto viene percepito come meno di valore).
+Dall'altra parte per\`o l'infrastruttura ha una sua parte invisibile (SO, sistemi di gestioni delle comunicazioni) che non viene considerata, o viene data per scontata. Questa parte riceve poca attenzione dall'azienda: non \`e pianificata manutenzione per questa parte dell'infrastruttura.
+L'infrastruttura invecchia pi\`u velocemente di quanto possiamo immaginare (alcune parti pi\`u di altre, ad es. reti e cablaggi sono pi\`u duraturi).
+L'infrastruttura, nel suo complesso, prepara il terreno per l'innovazione.
+Pu\`o essere vista in due modi diversi:
+\begin{itemize}
+\item Insieme di componenti (reti, cablaggi, sistemi di calcolo, sorgenti ed endpoint informativi..)
+\item Insieme di servizi
+\begin{enumerate}
+\item Piattaforma end user (visione da livello alto a livello basso)
+\item servizi di telecomunicazioni (si arriva a trattare i componenti che lo supportano)
+\item gestione dati
+\item sistemi a supporto dell'attivit\`a
+\item manutenzione IT (servizi, formazione, ricerca)
+
+\end{enumerate}
+
+\end{itemize}
+
+Si pu\`o parlare di infrastruttura a vari livelli:
+\begin{itemize}
+\item pubblico (connessioni e reti ad ampio raggio, internet, telefoni, mobile)
+\item aziendale (reti intranet)
+\item business (infrastruttura di settore, ad es. hw e sw appropriati per un determinato settore)
+\end{itemize}
+
+
+\subsection{Cambiamenti delle tecnologie}
+Le tecnologie IT cambiano molto velocemente, producendo una veloce crescita a livello di potenza di calcolo, capacit\`a e velocit\`a delle memorie, larghezza ed efficienza di banda delle reti.
+I cambiamenti possono essere dati da vari fattori:
+\begin{itemize}
+\item miglioramenti nell'efficienza delle tecnologie conosciute, 
+\item introduzione di nuovi materiali o tecnologie che presentano maggiori performance o maggiore specializzazione (si pensi ai CD tempo fa o agli SSD oggi), 
+\item declinazione dello scopo di una tecnologia in scopi diversi, ad es. i computer (con la nascita dei PC lo scopo dei computer \`e cambiato, varie attivit\`a cominciarono a usare i computer per la contabilit\`a e cos\`i via), i cellulari, che da semplici surrogati del telefono fisso, hanno visto un miglioramento tecnologico a livello HW tale da aumentare il numero delle sue funzionalit\`a a tal punto da cambiare il loro scopo (macchina fotografica, riproduttore musicale, terminale di lavoro..)
+\item cambio di paradigma, ad es. nel passaggio dai primi computer basati su modello meccanico a quelli basati su modello elettronico (avvenuto negli anni '50)
+\end{itemize}
+
+Questi cambiamenti influenzano le aziende in termini di obsolescenza (nel momento in cui mi rifiuto di seguire i cambiamenti) e opportunit\`a (se riesco ad adattarmi ai cambiamenti che si verificano).
+
+\subsection{Controllare i cambiamenti}
+A livello politico si possono definire degli standard, per rendere compatibili prodotti diversi (favorendo l'\textit{interoperabilit\`a} tra produttori diversi), ad es. nell'ambito dei protocolli di comunicazione di rete. La scelta di uno standard pu\`o essere fatta a tavolino o in base a determinati fattori (nel caso del TCP/IP perch\'e fungeva gi\`a da infrastruttura di internet in maniera sistematica quando la scelta dello standard era in discussione, rendendo troppo oneroso il cambiamento a uno standard diverso).
+Gli standard vogliono anche limitare la \textit{complessit\`a} nel mondo. \\
+A livello di singoli produttori, si vuole tutelare la \textit{retrocompatibilit\`a}, spesso difficile da mantenere.
+Le aziende posso controllare i cambiamenti
+\begin{itemize}
+\item tramite una grande attenzione alla manutenzione delle proprie infrastrutture affinch\'e non deperiscano, 
+\item tramite aggiornamenti (che portano talvolta problemi di retrocompatibilit\`a o malfunzionamenti o esclusione dall'update dei sistemi pi\`u vecchi), 
+\item tramite investimenti in nuove infrastrutture, 
+\item tramite revisione o riprogettazione periodica, ad es. il refactoring nel software, viste non molto bene dalle aziende, costrette ai costi pi\`u o meno elevati.
+\end{itemize}
+
+\section{Tipi di infrastrutture}
+\subsection{Piattaforme hardware}
+Si distinguono dispositivi di calcolo server e client.\\
+I server forniscono servizi di tipo repository, supporto di gestione dell'attivit\`a di rete, mainframe che supportano virtualizzazioni, computer molto potenti come supercomputer, grid/on demand/edge computing.\\
+I client (personali e dell'azienda, ad es. PC, workstation, mobile devices).\\
+L'uso di device personali porta a un cambiamento delle applicazioni usate nell'aziende, che possono fornire connessioni di tipo terminale remoto, interfacce browser, accentrando il luogo in cui viene effettuata la vera computazione.
+\subsection{Periferiche}
+Distinguiamo periferiche che generano dati che l'azienda vuole elaborare, ad es. sensori, controllers, o altro.
+Vi sono periferiche time driven o event driven, periferiche che possono essere programmate o no.
+Nella logistica (d'impresa e di trasporto) vi sono periferiche che controllano oggetti in movimento (scanner di codici a barre etc).
+Vi sono anche sensori di controllo dell'ambiente (sensori di inquinamento, telecamere..) utilizzati nelle aziende. 
+Periferiche di archiviazione dati e di output, come stampanti e display. 
+Periferiche di rete e comunicazione, a livello di trasporto (cavi, wireless), di infrastruttura (singoli nodi, nodi di conversione, come modem e gateway, nodi distribuiti, come i switch), di servizi (di connessione, come DHCP, controllo di accesso e protezione, come i firewall), di monitoraggio della rete.
