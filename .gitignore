@@ -159,3 +159,6 @@ pythontex-files-*/
 TSWLatexianTemp*
 *.pdf
 .DS_Store
+
+*
+!.gitignore
