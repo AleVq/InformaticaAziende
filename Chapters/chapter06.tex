@@ -1,0 +1,45 @@
+% !TEX root = ../Informatica e Aziende.tex
+\chapter{Business e management}
+\label{chap:Business e management}
+
+\section{Sistemi informazionale}
+\label{sec:Sistemi informazionale}
+I decisori dell'aziendale (managers etc) richiedono dati strutturati ed elaborati.
+Sono richiesti quindi un database (con tutte le specifiche che abbiamo gi\`a visto) e degli strumenti di analisi dei dati, che si possono dividere in tre tipologie:
+\begin{itemize}
+  \item reporting: producono liste statiche che rappresentano la situazione aziendale in un certo momento; sono strumenti veloci, il cui punto forte \`e invarianza nella forma di quello che rappresentano
+  \item sistemi di analisi interattiva guidata da ipotesi: di fronte a eventi imprevisti, il decisore parte dai report
+  e cerca anomalie che giustifichino l'evento imprevisto formulando una certa ipotesa che guida
+  le sue ricerche nei dati
+  \item sistemi di data mining: una funzione di analisi dei dati che, elaborando i dati compresi in un certo intervallo
+  di tempo, espone le anomalie che riscontra; il loro punto di forza sta nel fatto che possono trovare anomalie che
+  il decisore non avrebbe trovato. \`E una tecnologia piuttosto costosa
+\end{itemize}
+Queste tre categorie sono di complessit\`a crescente, partendo dalla prima.
+
+\subsection{Caratteristiche dei sistemi informazionali}
+\label{sub:Caratteristiche dei sistemi informazionali}
+Finalit\`a
+\begin{itemize}
+  \item descrive il passato dell'azienda
+  \begin{enumerate}
+    \item storicit\`a: (pu\`o arrivare fino a 5, massimo 10, anni)
+    \item dettaglio: i dati sono presentati in forma aggregata per evitare inutili
+    livelli di dettaglio; sono disponibili diversi livelli di aggregazione, per variare
+    il livello di dettaglio dei dati presentati
+    \item accessoai dati: in sola lettura (nel supporto ai processi decisionali),
+    gli aggiornamenti vengono fatti solo in determinati periodi di tempo
+  \end{enumerate}
+  \item "prevede" il futuro tramite elaborazione dei dati
+\end{itemize}
+\subsection{Modello multidimensionale}
+\label{sub:Modello multidimensionale}
+Nei sistemi di analisi ai fini di supporto alle decisioni, il modello dei dati adottato
+\`e di tipo multidimensionale: le informazioni sono articolate intorno a soggetti, fatti/eventi e misure.
+Ciascuno dei tre elementi appena citati sono in interazione reciproca con cardinali\`a 1-1 o anche 1-n.
+Lo spazio delle informazioni pu\`o essere visto come insieme di matrici multidimensionali.
+Spesso la matrice \`e denormalizzata. Si privilegia una struttura piana nell'organizzazione dei dati,
+per consentire delle sintesi dei dati pi\`u veloci.\\
+Si viene a produrre un ipercubo. L'elemento $A_{i,j,..}$ \`e un fatto elementare a cui viene associato un valore
+numero che lo quantifica (misura).
+L'iperspazio nell'ipercubo \`e poco popolato, perch\`e i clienti non acquistano tutti i giorni etc..

@@ -1,0 +1,53 @@
+% !TEX root = ../Informatica e Aziende.tex
+\chapter{Sistemi ERP}
+\label{chap:Sistemi ERP}
+\section{Sistemi Tecnici}
+\label{sec:Sistemi Tecnici}
+
+I sistemi di questo tipo sono fortemente verticalizzati: vengono
+per lo pi\`u prodotti ad hoc, in ambiti specifici.
+\subsection{Commesse d'impianto}
+\label{sub:Commesse d'impianto}
+Uno dei sistemi tecnici pi\`u complessi sono quelli che gestiscono
+le commesse d'impianto. Ci sono molte aziende che producono prodotti che
+non sono altro che progetti che vengono portati alla produzione (es. Danieli,
+che progetta e produce impianti molto complessi per la metallurgia, venduti e
+prodotti su commisione).\\
+Nelle commesse devo avere un sistema che supporti i diversi piani
+per ogni parte del processo (dalla progettazione all'implementazione).
+Nelle commesse inoltre la parte di pagamento ha una cadenza scandita dai suoi stati
+d'avanzamento: pu\`o durare mesi, anni e i pagamenti possono essere
+effettuati con cadenze prefissate.\\
+\subsection{Scheduling di produzione}
+\label{sub:Scheduling di produzione}
+Dato un ordine, voglio poter elaborare dei dati per riuscire a dire
+al cliente quanto tempo ci metto a effettuare la consegna. Tali dati possono essere:
+\begin{itemize}
+  \item Giacenza (del prodotto in magazzino), allocazioni (ordini gi\`a effettuati dai clienti).
+  Se giacenza - allocazioni < 0, allora devo produrre l'oggetto richiesto
+  dal cliente: allora i tempi si allungano e dipendono da:
+  \begin{enumerate}
+    \item tempo, macchine, persone
+    \item tempo di attrezzaggio della macchina
+    \item tempo di passaggio da una fase all'altra della produzione
+  \end{enumerate}.
+  Nel caso in cui non abbia le materie prime per la produzione, devo considerare
+  anche i tempi di approvvigionamento del fornitore, dovendo considerare quindi
+  anche le distanze azienda-fornitore, la cardinalit\`a dell'ordine di approvvigionamento.
+\end{itemize}
+Lo scheduling di produzione sono utili quando le aziende voglio tenere una piena occupazione
+di macchine e personale, di modo che tali risorse (che non sono finite) non rimangano ferme.
+I pianificatori di produzione vanno a ottimizzare l'uso di risorse umane e impiantistiche in funzione
+dell'attuale situazione dell'azienda. Sono software che effettuano dei calcoli molto complessi.
+\subsection{Sistemi CAD}
+\label{sub:Sistemi CAD}
+Computer Aided Design.\\
+Ha varie estensioni, tra cui CAE, CAM e CIM (Computer Integrated Manufacturing).
+\section{Sistemi di ufficio e organizzazione}
+\label{sec:Sistemi di ufficio e organizzazione}
+\begin{itemize}
+  \item Automazione di ufficio
+  \item Gestione elettronica dei documenti, un plusvalore al sistema che supporta il lavoro quotidiano
+  \item Document flow (flusso dei documenti tra le varie parti del processo) e Workflow
+  \item Strumenti per il lavoro collaborativo
+\end{itemize}
