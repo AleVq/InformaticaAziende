@@ -1,0 +1,297 @@
+% !TEX root = ../Informatica e Aziende.tex
+\chapter{Business e management}
+\label{chap:Business e management}
+
+\section{Sistemi informazionale}
+\label{sec:Sistemi informazionale}
+I decisori dell'aziendale (managers etc) richiedono dati strutturati ed elaborati.
+Sono richiesti quindi un database (con tutte le specifiche che abbiamo gi\`a visto) e degli strumenti di analisi dei dati, che si possono dividere in tre tipologie:
+\begin{itemize}
+  \item reporting: producono liste statiche che rappresentano la situazione aziendale in un certo momento; sono strumenti veloci, il cui punto forte \`e invarianza nella forma di quello che rappresentano
+  \item sistemi di analisi interattiva guidata da ipotesi: di fronte a eventi imprevisti, il decisore parte dai report
+  e cerca anomalie che giustifichino l'evento imprevisto formulando una certa ipotesa che guida
+  le sue ricerche nei dati
+  \item sistemi di data mining: una funzione di analisi dei dati che, elaborando i dati compresi in un certo intervallo
+  di tempo, espone le anomalie che riscontra; il loro punto di forza sta nel fatto che possono trovare anomalie che
+  il decisore non avrebbe trovato. \`E una tecnologia piuttosto costosa
+\end{itemize}
+Queste tre categorie sono di complessit\`a crescente, partendo dalla prima.
+
+\subsection{Caratteristiche dei sistemi informazionali}
+\label{sub:Caratteristiche dei sistemi informazionali}
+Finalit\`a
+\begin{itemize}
+  \item descrive il passato dell'azienda
+  \begin{enumerate}
+    \item storicit\`a: (pu\`o arrivare fino a 5, massimo 10, anni)
+    \item dettaglio: i dati sono presentati in forma aggregata per evitare inutili
+    livelli di dettaglio; sono disponibili diversi livelli di aggregazione, per variare
+    il livello di dettaglio dei dati presentati
+    \item accessoai dati: in sola lettura (nel supporto ai processi decisionali),
+    gli aggiornamenti vengono fatti solo in determinati periodi di tempo
+  \end{enumerate}
+  \item "prevede" il futuro tramite elaborazione dei dati
+\end{itemize}
+\subsection{Modello multidimensionale}
+\label{sub:Modello multidimensionale}
+Nei sistemi di analisi ai fini di supporto alle decisioni, il modello dei dati adottato
+\`e di tipo multidimensionale: le informazioni sono articolate intorno a soggetti, fatti/eventi e misure.
+Ciascuno dei tre elementi appena citati sono in interazione reciproca con cardinali\`a 1-1 o anche 1-n.
+Lo spazio delle informazioni pu\`o essere visto come insieme di matrici multidimensionali.
+Spesso la matrice \`e denormalizzata. Si privilegia una struttura piana nell'organizzazione dei dati,
+per consentire delle sintesi dei dati pi\`u veloci.\\
+Si viene a produrre un ipercubo. L'elemento $A_{i,j,..}$ \`e un fatto elementare a cui viene associato un valore
+numero che lo quantifica (misura).
+L'iperspazio nell'ipercubo \`e poco popolato, perch\`e i clienti non acquistano tutti i giorni etc..
+
+Le caratteristiche numeriche elaborate dal modello multidimensionale
+tendono a non avere ambiguità.
+
+I fatti elementari da cui estrapoliamo dati quantitativi possono
+comprendere diverse misure. I dati estrapolati vanno poi aggregati
+tramite operatori quali somma, media, max, min..
+
+La dimensione invece rappresenta una delle coordinate dell'iperspazio
+nell'ipercubo. Il dominio della dimensione dev'essere finito. Ad es. il
+numero dei clienti (nell'ordine delle migliaia tipicamente), il numero
+delle merci (decine di migliaia, tipicamente)..
+
+Le gerarchie (o attributi dimensionali) sono insiemi di attrivuti
+collegati ad una dimensione, ad es. alla data sono associati ora,
+giorno, mese, anno. Allo stesso modo per i clienti: settori in cui
+operano, luogo in cui si trovano, tipologia.. Più ricche sono tali
+gerarchie, più interessanti diventano le aggregazioni di questi dati.
+
+\subsection{Caratteristiche
+strutturali}\label{caratteristiche-strutturali}
+
+\begin{itemize}
+
+\item
+  Multidimensionalità
+\item
+  Granularità\\
+  Grado minimo di aggregazione dei dati, corrispondente a un fatto
+  elementare
+\item
+  Arco temporale\\
+  Intervallo temporale (fino ad alcuni anni) coperto dai dati raccolti
+\end{itemize}
+
+\subsection{Caratteristiche
+funzionali}\label{caratteristiche-funzionali}
+
+\begin{itemize}
+
+\item
+  Integrazione dei dati intorno al concetto dei soggetti\\
+  I dati sono organizzati intorno a determinati eventi concettuali che
+  si sono verificati in azienda
+\item
+  Accessibilità\\
+  I dati devono essere facilmente visibili, fruibili. La capacità di
+  aggregare i dati del sistema dev'essere ottimizzata per mantenere
+  veloce la consultazione dei dati
+\item
+  Flessibilità e sintesi\\
+  Lo spazio multidimensionale deve ottemperare alle aspettative degli
+  utenti (ad es. relative alle dimensioni dei dati)
+\item
+  Correttezza
+\item
+  Completezza\\
+  Il sistema deve essere in grado di rappresentare tutti gli eventi
+  rilevanti per le analisi
+\end{itemize}
+
+\subsection{Data warehouse}\label{data-warehouse}
+
+Letteralmente, magazzino dei dati. Vi sono memorizzati tutti i fatti e
+le informazioni relativi alle analisi. Può raggiungere dimensioni
+notevoli. I dati sono ``raw'', completi e consistenti.
+
+Nell'architettura dei sistemi di data warehousing ogni elemento
+d'archivio è legato a un determinato processo. Data warehouse fa parte
+dei dati informazionali. Negli strumenti di analisi dei dati compaiono
+data mining e OLAP (online analytical processing). Alcuni DB integrano
+il sistema OLAP e vengono chiamati MOLAP.
+
+\begin{itemize}
+
+\item
+  Vantaggi: le query anche più complesse sono eseguite velocemente
+\item
+  Svantaggi: occupano troppo spazio (la matrice multidimensionale è
+  istanziata nella sua totalità) e non esiste alcuno standard
+\end{itemize}
+
+Alcuni DB relazionali integrano la struttura multidimensionale (ROLAP)
+realizzando un modello semi-relazionale.
+
+\begin{itemize}
+
+\item
+  Vantaggi: spazio occupato minimo (sono memorizzati solo eventi
+  verificati, la matrice non è istanziata in toto)
+\item
+  Svantaggi: scarsa efficienza nell'esecuzione delle query di
+  aggregazione e una più bassa capacità di risposta
+\end{itemize}
+
+Nella vita reale si viene a usare un approccio ibrido (HOLAP): il data
+warehouse è implementato su base relazionale mentre il data mart su base
+multidimensionale.
+
+\subsection{Data Mart}\label{data-mart}
+
+Contiene una porzione dei dati della data warehouse, aggregati e
+preparati per il singolo utente. Se l'utente è a livello di direzione
+centrale la panoramica comprenderà tutti i dati, ma il livello di
+aggregazione sarà ben superiore a quello barebone della data warehouse.
+
+\subsection{Ciclo di vita del data
+warehouse}\label{ciclo-di-vita-del-data-warehouse}
+
+La costruzione avviene tramite un processo iterativo. Vi sono analisi
+delle sorgenti (dei dati), progettazione concettuale, poi logica e
+implementativa.
+
+Il popolamento dei dati avviene tramite estrazione dei dati dalle
+sorgenti. Tali dati sono poi integrati e trasformati per conformarsi
+alla consistenza dei dati della warehouse. Sono poi puliti, riconoscendo
+ed eliminando errori e incongruenze. I dati sono poi usati per popolare
+la warehouse.
+
+\subsection{Analisi OLAP}\label{analisi-olap}
+
+Navigazione interattiva sui dati multidimensionali. È l'equivalente per
+l'analisi dei dati del browser per internet (difatti si possono inserire
+bookmark, viene tenuta una history dei passi fatti). Passi:
+
+\begin{itemize}
+
+\item
+  drill down (passo a una vista più dettagliata)
+\item
+  roll up (passo a una vista più aggregata)
+\item
+  slice (visualizzazione 2d di una porzione della matrice
+  multidimensionale)
+\item
+  dice (filtro i fatti elementari per identificare un sottospazio
+  dell'iperspazio)
+\item
+  pivot (cambio del punto di vista)
+\end{itemize}
+
+\subsubsection{Limiti di OLAP}\label{limiti-di-olap}
+
+\begin{itemize}
+
+\item
+  Le informazioni non sono facilmente identificabili
+\item
+  insufficiente perché troppo dipendente dai processi deduttivi dei
+  decisori
+\end{itemize}
+
+\subsection{Data mining}\label{data-mining}
+
+Identifica tutti quei sistemi che sono in grado di applicare delle
+procedure di analisi dei dati in grado di far emergere delle condizioni
+notevoli, rilevanti. Passi del processo di mining
+
+\begin{itemize}
+
+\item
+  pulizia
+\item
+  integrazione
+\item
+  selezione
+\item
+  trasformazione
+\item
+  data mining
+\item
+  valutazione
+\item
+  presentazione dati
+\end{itemize}
+
+Si attiva una procedura di scansione dei dati alla ricerca di pattern.
+Molti mattern potrebbero essere irrilevanti: gli utenti devono
+specificare al sistema la direzione in cui ``scavare'' (mining).
+
+Abbiamo 5 funzioni di mining:
+
+\begin{itemize}
+
+\item
+  caratterizzazione e discriminazione (i dati sono aggregati per
+  caratteristiche)
+\item
+  analisi associativa (quali sono le condizioni che si verificano
+  contemporaneamente quando si verifica un certo evento, ad es. Walmart
+  aveva trovato che una vendita di pannolini per bambini era associata a
+  una vendita di birra, allora Walmart ha provato ad avvicinare negli
+  scaffali pannollini e birra e questo ha portato a una maggiore vendita
+  di birre)
+\item
+  classificazione e predizione (rilevo delle informazioni relative a un
+  certo soggetto, in base a queste posso calcolare la probabilità che
+  tale soggetto assuma comportamenti anomali, ad es. nei preventivi per
+  le assicurazioni auto)
+\item
+  analisi dei cluster (cerca i luoghi in cui si addensa l'info, ad es.
+  classi omogenee di soggetti: tipi di prodotti che vengono comprati
+  prevalentemente da un tipo di cliente)
+\item
+  analisi degli outlier (cerca i luoghi in cui si verifica la
+  rarefazione l'info, cerco gli elementi che deviano dalle situazioni
+  standard: frodi e altro)
+\end{itemize}
+
+\subsection{Campi di applicazione di data mining e
+warehousing}\label{campi-di-applicazione-di-data-mining-e-warehousing}
+
+\begin{itemize}
+
+\item
+  Analisi finanziarie
+\item
+  Analisi marketing
+\item
+  Analisi vendite
+\end{itemize}
+
+Fonti di informazioni ulteriori:
+
+\begin{itemize}
+
+\item
+  dati di accesso al sito dell'azienda
+\item
+  log delle attività sulla rete
+\end{itemize}
+
+\section{Gestione della conoscenza}\label{gestione-della-conoscenza}
+
+Aiuta a esplicitare a livello organizzativo la conoscenza dell'azienda.
+
+Include le tecniche viste fin'ora, che sono solo quantitative. Altri
+strumenti sono
+
+\begin{itemize}
+
+\item
+  document management, per la conservazione di altri tipi di conoscenza,
+  non necessariamente quantitativa
+\item
+  portali, motori di ricerca per la diffusione della conoscenza
+\end{itemize}
+
+A livello di organizzazione esiste una cultura della conoscenza (idea
+che la conoscenza è dappertutto nell'azienda, che è preziosa e aiuta a
+migliorare l'azienda, vale la pena diffonderla all'interno
+dell'organizzazione, formare il personale..)
