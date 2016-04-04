@@ -159,7 +159,7 @@ pythontex-files-*/
 TSWLatexianTemp*
 *.pdf
 .DS_Store
-<<<<<<< HEAD
-=======
 
->>>>>>> 650f29a6ac27f20f1d6dbca814cb96d4c21a783e
+# Markdown
+*.md
+.Ulysses-Group.plist

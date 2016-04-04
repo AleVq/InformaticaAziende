@@ -8,7 +8,7 @@ I sistemi di questo tipo sono fortemente verticalizzati: vengono
 per lo pi\`u prodotti ad hoc, in ambiti specifici.
 \subsection{Commesse d'impianto}
 \label{sub:Commesse d'impianto}
-Uno dei sistemi tecnici pi\`u complessi sono quelli che gestiscono
+Alcuni dei sistemi tecnici pi\`u complessi sono quelli che gestiscono
 le commesse d'impianto. Ci sono molte aziende che producono prodotti che
 non sono altro che progetti che vengono portati alla produzione (es. Danieli,
 che progetta e produce impianti molto complessi per la metallurgia, venduti e
@@ -24,13 +24,14 @@ Dato un ordine, voglio poter elaborare dei dati per riuscire a dire
 al cliente quanto tempo ci metto a effettuare la consegna. Tali dati possono essere:
 \begin{itemize}
   \item Giacenza (del prodotto in magazzino), allocazioni (ordini gi\`a effettuati dai clienti).
-  Se giacenza - allocazioni < 0, allora devo produrre l'oggetto richiesto
+  Se giacenza - allocazioni $<$ 0, allora devo produrre l'oggetto richiesto
   dal cliente: allora i tempi si allungano e dipendono da:
   \begin{enumerate}
     \item tempo, macchine, persone
     \item tempo di attrezzaggio della macchina
-    \item tempo di passaggio da una fase all'altra della produzione
-  \end{enumerate}.
+    \item tempo di passaggio da una fase all'altra della produzione.
+  \end{enumerate}
+  \item
   Nel caso in cui non abbia le materie prime per la produzione, devo considerare
   anche i tempi di approvvigionamento del fornitore, dovendo considerare quindi
   anche le distanze azienda-fornitore, la cardinalit\`a dell'ordine di approvvigionamento.
