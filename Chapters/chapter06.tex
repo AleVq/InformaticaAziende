@@ -4,14 +4,14 @@
 
 \section{Sistemi informazionale}
 \label{sec:Sistemi informazionale}
-I decisori dell'aziendale (managers etc) richiedono dati strutturati ed elaborati.
+I decisori dell'azienda (managers etc) richiedono dati strutturati ed elaborati.
 Sono richiesti quindi un database (con tutte le specifiche che abbiamo gi\`a visto) e degli strumenti di analisi dei dati, che si possono dividere in tre tipologie:
 \begin{itemize}
-  \item reporting: producono liste statiche che rappresentano la situazione aziendale in un certo momento; sono strumenti veloci, il cui punto forte \`e invarianza nella forma di quello che rappresentano
-  \item sistemi di analisi interattiva guidata da ipotesi: di fronte a eventi imprevisti, il decisore parte dai report
-  e cerca anomalie che giustifichino l'evento imprevisto formulando una certa ipotesa che guida
+  \item Reporting: producono liste statiche che rappresentano la situazione aziendale in un certo momento; sono strumenti veloci, il cui punto forte \`e invarianza nella forma di quello che rappresentano
+  \item Sistemi di analisi interattiva guidata da ipotesi: di fronte a eventi imprevisti, il decisore parte dai report
+  e cerca anomalie che giustifichino l'evento imprevisto formulando una certa ipotesi che guida
   le sue ricerche nei dati
-  \item sistemi di data mining: una funzione di analisi dei dati che, elaborando i dati compresi in un certo intervallo
+  \item Sistemi di data mining: una funzione di analisi dei dati che, elaborando i dati compresi in un certo intervallo
   di tempo, espone le anomalie che riscontra; il loro punto di forza sta nel fatto che possono trovare anomalie che
   il decisore non avrebbe trovato. \`E una tecnologia piuttosto costosa
 \end{itemize}
@@ -27,7 +27,7 @@ Finalit\`a
     \item dettaglio: i dati sono presentati in forma aggregata per evitare inutili
     livelli di dettaglio; sono disponibili diversi livelli di aggregazione, per variare
     il livello di dettaglio dei dati presentati
-    \item accessoai dati: in sola lettura (nel supporto ai processi decisionali),
+    \item accesso ai dati: in sola lettura (nel supporto ai processi decisionali),
     gli aggiornamenti vengono fatti solo in determinati periodi di tempo
   \end{enumerate}
   \item "prevede" il futuro tramite elaborazione dei dati
@@ -45,7 +45,7 @@ numero che lo quantifica (misura).
 L'iperspazio nell'ipercubo \`e poco popolato, perch\`e i clienti non acquistano tutti i giorni etc..
 
 Le caratteristiche numeriche elaborate dal modello multidimensionale
-tendono a non avere ambiguità.
+tendono a non avere ambiguit\`a.
 
 I fatti elementari da cui estrapoliamo dati quantitativi possono
 comprendere diverse misure. I dati estrapolati vanno poi aggregati
@@ -56,11 +56,11 @@ nell'ipercubo. Il dominio della dimensione dev'essere finito. Ad es. il
 numero dei clienti (nell'ordine delle migliaia tipicamente), il numero
 delle merci (decine di migliaia, tipicamente)..
 
-Le gerarchie (o attributi dimensionali) sono insiemi di attrivuti
+Le gerarchie (o attributi dimensionali) sono insiemi di attributi
 collegati ad una dimensione, ad es. alla data sono associati ora,
 giorno, mese, anno. Allo stesso modo per i clienti: settori in cui
-operano, luogo in cui si trovano, tipologia.. Più ricche sono tali
-gerarchie, più interessanti diventano le aggregazioni di questi dati.
+operano, luogo in cui si trovano, tipologia.. Pi\`u ricche sono tali
+gerarchie, pi\`u interessanti diventano le aggregazioni di questi dati.
 
 \subsection{Caratteristiche
 strutturali}\label{caratteristiche-strutturali}
@@ -68,9 +68,9 @@ strutturali}\label{caratteristiche-strutturali}
 \begin{itemize}
 
 \item
-  Multidimensionalità
+  Multidimensionalit\`a
 \item
-  Granularità\\
+  Granularit\`a\\
   Grado minimo di aggregazione dei dati, corrispondente a un fatto
   elementare
 \item
@@ -88,12 +88,12 @@ funzionali}\label{caratteristiche-funzionali}
   I dati sono organizzati intorno a determinati eventi concettuali che
   si sono verificati in azienda
 \item
-  Accessibilità\\
-  I dati devono essere facilmente visibili, fruibili. La capacità di
+  Accessibilit\`a\\
+  I dati devono essere facilmente visibili, fruibili. La capacit\`a di
   aggregare i dati del sistema dev'essere ottimizzata per mantenere
   veloce la consultazione dei dati
 \item
-  Flessibilità e sintesi\\
+  Flessibilit\`a e sintesi\\
   Lo spazio multidimensionale deve ottemperare alle aspettative degli
   utenti (ad es. relative alle dimensioni dei dati)
 \item
@@ -107,11 +107,11 @@ funzionali}\label{caratteristiche-funzionali}
 \subsection{Data warehouse}\label{data-warehouse}
 
 Letteralmente, magazzino dei dati. Vi sono memorizzati tutti i fatti e
-le informazioni relativi alle analisi. Può raggiungere dimensioni
+le informazioni relativi alle analisi. Pu\`o raggiungere dimensioni
 notevoli. I dati sono ``raw'', completi e consistenti.
 
 Nell'architettura dei sistemi di data warehousing ogni elemento
-d'archivio è legato a un determinato processo. Data warehouse fa parte
+d'archivio \`e legato a un determinato processo. Data warehouse fa parte
 dei dati informazionali. Negli strumenti di analisi dei dati compaiono
 data mining e OLAP (online analytical processing). Alcuni DB integrano
 il sistema OLAP e vengono chiamati MOLAP.
@@ -119,10 +119,10 @@ il sistema OLAP e vengono chiamati MOLAP.
 \begin{itemize}
 
 \item
-  Vantaggi: le query anche più complesse sono eseguite velocemente
+  Vantaggi: le query anche pi\`u complesse sono eseguite velocemente
 \item
-  Svantaggi: occupano troppo spazio (la matrice multidimensionale è
-  istanziata nella sua totalità) e non esiste alcuno standard
+  Svantaggi: occupano troppo spazio (la matrice multidimensionale \`e
+  istanziata nella sua totalit\`a) e non esiste alcuno standard
 \end{itemize}
 
 Alcuni DB relazionali integrano la struttura multidimensionale (ROLAP)
@@ -132,22 +132,22 @@ realizzando un modello semi-relazionale.
 
 \item
   Vantaggi: spazio occupato minimo (sono memorizzati solo eventi
-  verificati, la matrice non è istanziata in toto)
+  verificati, la matrice non \`e istanziata in toto)
 \item
   Svantaggi: scarsa efficienza nell'esecuzione delle query di
-  aggregazione e una più bassa capacità di risposta
+  aggregazione e una pi\`u bassa capacit\`a di risposta
 \end{itemize}
 
 Nella vita reale si viene a usare un approccio ibrido (HOLAP): il data
-warehouse è implementato su base relazionale mentre il data mart su base
+warehouse \`e implementato su base relazionale mentre il data mart su base
 multidimensionale.
 
 \subsection{Data Mart}\label{data-mart}
 
 Contiene una porzione dei dati della data warehouse, aggregati e
-preparati per il singolo utente. Se l'utente è a livello di direzione
-centrale la panoramica comprenderà tutti i dati, ma il livello di
-aggregazione sarà ben superiore a quello barebone della data warehouse.
+preparati per il singolo utente. Se l'utente \`e a livello di direzione
+centrale la panoramica comprender\`a tutti i dati, ma il livello di
+aggregazione sar\`a ben superiore a quello barebone della data warehouse.
 
 \subsection{Ciclo di vita del data
 warehouse}\label{ciclo-di-vita-del-data-warehouse}
@@ -164,16 +164,16 @@ la warehouse.
 
 \subsection{Analisi OLAP}\label{analisi-olap}
 
-Navigazione interattiva sui dati multidimensionali. È l'equivalente per
+Navigazione interattiva sui dati multidimensionali. \`e l'equivalente per
 l'analisi dei dati del browser per internet (difatti si possono inserire
 bookmark, viene tenuta una history dei passi fatti). Passi:
 
 \begin{itemize}
 
 \item
-  drill down (passo a una vista più dettagliata)
+  drill down (passo a una vista pi\`u dettagliata)
 \item
-  roll up (passo a una vista più aggregata)
+  roll up (passo a una vista pi\`u aggregata)
 \item
   slice (visualizzazione 2d di una porzione della matrice
   multidimensionale)
@@ -191,7 +191,7 @@ bookmark, viene tenuta una history dei passi fatti). Passi:
 \item
   Le informazioni non sono facilmente identificabili
 \item
-  insufficiente perché troppo dipendente dai processi deduttivi dei
+  Insufficiente perch\`e troppo dipendente dai processi deduttivi dei
   decisori
 \end{itemize}
 
@@ -220,7 +220,8 @@ notevoli, rilevanti. Passi del processo di mining
 \end{itemize}
 
 Si attiva una procedura di scansione dei dati alla ricerca di pattern.
-Molti mattern potrebbero essere irrilevanti: gli utenti devono
+% Molti mattern potrebbero essere irrilevanti: gli utenti devono
+Molti pattern potrebbero essere irrilevanti: gli utenti devono
 specificare al sistema la direzione in cui ``scavare'' (mining).
 
 Abbiamo 5 funzioni di mining:
@@ -239,7 +240,7 @@ Abbiamo 5 funzioni di mining:
   di birre)
 \item
   classificazione e predizione (rilevo delle informazioni relative a un
-  certo soggetto, in base a queste posso calcolare la probabilità che
+  certo soggetto, in base a queste posso calcolare la probabilit\`a che
   tale soggetto assuma comportamenti anomali, ad es. nei preventivi per
   le assicurazioni auto)
 \item
@@ -272,7 +273,7 @@ Fonti di informazioni ulteriori:
 \item
   dati di accesso al sito dell'azienda
 \item
-  log delle attività sulla rete
+  log delle attivit\`a sulla rete
 \end{itemize}
 
 \section{Gestione della conoscenza}\label{gestione-della-conoscenza}
@@ -292,6 +293,6 @@ strumenti sono
 \end{itemize}
 
 A livello di organizzazione esiste una cultura della conoscenza (idea
-che la conoscenza è dappertutto nell'azienda, che è preziosa e aiuta a
+che la conoscenza \`e dappertutto nell'azienda, che \`e preziosa e aiuta a
 migliorare l'azienda, vale la pena diffonderla all'interno
 dell'organizzazione, formare il personale..)
