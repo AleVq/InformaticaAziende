@@ -1,0 +1,173 @@
+% !TEX root = ../Informatica e Aziende.tex
+\chapter{Sicurezza}
+
+\section{Vulnerabilit\`a}
+
+L'azienda pu\'o essere vista come un sistema (composto da persone, IT
+systems, DB) che si interfaccia con cloud, altre aziende, fornitori,
+clienti.\\
+In termini di sicurezza l'azienda ha bisogno di garantire
+
+\begin{itemize}
+
+\item
+  Continuit\`a di servizio
+\item
+  Uso corretto dell'infrastruttura
+\item
+  Riservatezza dei dati
+\end{itemize}
+
+\subsection{Fonti di rischio per l'azienda}
+
+\begin{itemize}
+
+\item
+  Eventi accidentali (naturali), a cui spesso le aziende non pensano
+\item
+  Interruzioni di servizi esterni (ad es. il mio SI non \`e utilizzabile
+  perch\'e alcuni servizi di terzi a cui l'azienda si appoggia non sono
+  temporaneamente disponibili)
+\item
+  Usure e guasti HW
+\item
+  Bug SW
+\end{itemize}
+
+\subsection{Vi sono anche eventi causati intenzialmente da persone}
+
+\begin{itemize}
+
+\item
+  Attacchi indifferenziati (virus, malware, tutte le attivit\`a portate a
+  termine da persone scannerizzano la rete in modo ampio, cercano
+  vulnerabilit\`a dei sistemi per usare le risorse che riescono a prendere
+  in mano..) (indifferenziati perch\'e non sono diretti alla mia azienda)
+\item
+  Dolo dall'esterno (l'opposto dell'indifferenziato, si vuole attaccare
+  proprio quella determinata azienda)
+\item
+  Rischi dall'interno (determinati da una mancanza di conoscenza, ad es.
+  l'utente che usa male il SI, oppure da un dolo, acquisizione di
+  informazioni riservate, uso improprio del SI)
+\end{itemize}
+
+\subsection{Rischi che nascono dalle cause appena citate}
+
+\begin{itemize}
+
+\item
+  Interruzione/rallentamento del lavoro
+\item
+  Data corruption (dati non pi\'u utilizzabile)
+\item
+  Perdite economica dirette
+\item
+  Perdita di competitivit\`a per diffusione di segreti industriali
+\item
+  Perdita di credibilit\`a (tipo icloud-leaks per la Apple)
+\item
+  Cause giudiziarie per mancanza di protezione dei dati dei clienti
+\end{itemize}
+
+\subsection{Strategie per migliorare la
+sicurezza}
+
+\begin{itemize}
+
+\item
+  Investimenti in infrastrutture IT: apparati di rete attivi (es.
+  firewall), ridondanza dei dati, SW per monitoraggio e controllo
+\item
+  Investimento in organizzazione: def. vincoli su visibilit\`a dei dati,
+  di procedure (a cui tutti gli user del sistema si devono attenere),
+  attivit\`a (umane) di monitoraggio e controllo e infine devo nominare
+  una o pi\'u persone come responsabili del SI
+\item
+  Investimento in formazione
+\end{itemize}
+
+Tutto ci\'o porta dei costi -certi- che non \`e sicuro portino a dei
+guadagni.\\
+Inoltre si aumentano le attivit\`a di controllo, la burocrazia interna, i
+vincoli che gli utenti del SI devono rispettare, la complessit\`a del
+sistema.\\
+Molte aziende sono restie a uinvestire somme importanti per la
+sicurezza.
+
+Cosa spinge un'azienda a investire sulla sicurezza?
+
+\begin{itemize}
+
+\item
+  Un manager \emph{consapevole} dei rischi in relazione al ruolo dell'IT
+  nell'azienda.\\
+\item
+  Obblighi di mercato certificazione della qualit\`a attraverso il
+  rispetto di standard di sicurezza quali ISO 27001 e 27002
+\item
+  Obblighi di legge: trattamento dei dati personali (legge 196/2003),
+  fondamentali ad es. nelle aziende sanitarie
+\item
+  Obblighi di legge: norme specifiche per ambienti specifici (ad es.
+  nelle istituzioni pubbliche
+\end{itemize}
+
+Il trattamento della sicurezza \`e un \emph{processo} aziendale. Non parte
+se non vi \`e un impegno forte da parte del management aziendale.\\
+La costruzione del sistema di sicurezza comprende la valutazione dei
+rischi, del contesto in cui opera l'azienda e la definizione della
+politica di sicurezza aziendale, che avviene in funzione delle
+precedenti valutazioni.\\
+Definita la politica, si passa al progetto vero e proprio. Si
+determinano:
+
+\begin{itemize}
+
+\item
+  soluzione per il controllo del rischio
+\item
+  piano di implementazione
+\item
+  responsabilit\`a operative
+\item
+  processi di aggiornamento
+\item
+  procedure di monitoraggio continuo (appoggiate a SW, tipicamente, che
+  esegue scansioni continuamente che inviano risultati al gestore della
+  sicurezza)
+\item
+  procedure di intervento in caso di anomalia
+\item
+  audit periodici esterni (ogni 1,2 anni una societ\`a esterna che entra
+  in azienda e con uno sguardo obiettivo valuta il sistema)
+\item
+  intervallo di revisione (mantiene la complessit\`a dei sistemi bassa,
+  aggiorna gli apparati..)
+\end{itemize}
+
+\subsection{Ambiti di tutela}
+
+Vogliamo tutelare l'infrastruttura informatica, i dati, i documenti
+informatici, il patrimonio intellettuale.
+
+\subsubsection{Sicurezza dell'infrastruttura}
+
+Vengono usati sistemi di protezione della rete (firewall, antivirus,
+sistemi di controllo..) per garantire che l'infrastruttura sia usata in
+modo corretto da chi accede con/senza diritto al sistema.
+
+Si lavora sulla ridondanza dell'infrastruttura per avere a vari livelli
+la disponibilit\`a di qualcosa di sostitutivo (ricambi, backup di dati..).
+
+Con questi sistemi non riesco a rilevare usure e guasti. Avverranno
+analisi in loco e scansione dell'infrastrutture per scovarli, se
+presenti.
+
+\subsubsection{Supporto esterno}
+
+Si definiscono accordi (normativi attraverso contratti ben definiti di
+manutenzione e supporto) con partner esterni per il pronto intervento su
+SW e HW.
+
+\end{document}
