@@ -157,7 +157,6 @@ pythontex-files-*/
 
 # Latexian
 TSWLatexianTemp*
-*.pdf
 .DS_Store
 
 # Markdown
