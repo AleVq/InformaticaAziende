@@ -4,7 +4,7 @@
 \section{Sistemi Tecnici}
 \label{sec:Sistemi Tecnici}
 
-I sistemi di questo tipo sono fortemente verticalizzati: vengono
+I sistemi ERP (Enterprise Resource Planning) sono fortemente verticalizzati: vengono
 per lo pi\`u prodotti ad hoc, in ambiti specifici.
 \subsection{Commesse d'impianto}
 \label{sub:Commesse d'impianto}
@@ -20,24 +20,20 @@ d'avanzamento: pu\`o durare mesi, anni e i pagamenti possono essere
 effettuati con cadenze prefissate.\\
 \subsection{Scheduling di produzione}
 \label{sub:Scheduling di produzione}
-Dato un ordine, voglio poter elaborare dei dati per riuscire a dire
-al cliente quanto tempo ci metto a effettuare la consegna. Tali dati possono essere:
+Dato un ordine, voglio poter elaborare dei dati per riuscire a comunicare al cliente i tempi di attesa previsti. Tali dati possono essere:
 \begin{itemize}
   \item Giacenza (del prodotto in magazzino), allocazioni (ordini gi\`a effettuati dai clienti).
-  Se giacenza - allocazioni $<$ 0, allora devo produrre l'oggetto richiesto
-  dal cliente: allora i tempi si allungano e dipendono da:
+  Se giacenza - allocazioni $<$ 0, allora non sono presenti sufficienti scorte in stock e si rende necessario produrre nuovi lotti dell'oggetto richiesto dal cliente: a questo punto, l'allungamento dei tempi dipende da:
   \begin{enumerate}
     \item tempo, macchine, persone
     \item tempo di attrezzaggio della macchina
     \item tempo di passaggio da una fase all'altra della produzione.
   \end{enumerate}
   \item
-  Nel caso in cui non abbia le materie prime per la produzione, devo considerare
-  anche i tempi di approvvigionamento del fornitore, dovendo considerare quindi
-  anche le distanze azienda-fornitore, la cardinalit\`a dell'ordine di approvvigionamento.
+  Nel caso in cui non siano disponibili le materie prime per la produzione, si devono considerare anche i tempi di approvvigionamento del fornitore, dovendo considerare quindi anche le distanze azienda-fornitore e la cardinalit\`a dell'ordine di approvvigionamento.
 \end{itemize}
-Lo scheduling di produzione sono utili quando le aziende voglio tenere una piena occupazione
-di macchine e personale, di modo che tali risorse (che non sono finite) non rimangano ferme.
+Lo scheduling di produzione \`e utile quando le aziende vogliono tenere una piena occupazione
+di macchine e personale, di modo che tali risorse (che non sono infinite) non rimangano ferme.\\
 I pianificatori di produzione vanno a ottimizzare l'uso di risorse umane e impiantistiche in funzione
 dell'attuale situazione dell'azienda. Sono software che effettuano dei calcoli molto complessi.
 \subsection{Sistemi CAD}
@@ -46,6 +42,7 @@ Computer Aided Design.\\
 Ha varie estensioni, tra cui CAE, CAM e CIM (Computer Integrated Manufacturing).
 \section{Sistemi di ufficio e organizzazione}
 \label{sec:Sistemi di ufficio e organizzazione}
+Esistono vari tipi di SI che hanno lo scopo di migliorare il workflow negli uffici. Alcuni di questi verranno approfonditi pi\`u avanti.
 \begin{itemize}
   \item Automazione di ufficio
   \item Gestione elettronica dei documenti, un plusvalore al sistema che supporta il lavoro quotidiano

@@ -4,7 +4,7 @@
 
 \section{Sistemi informazionali}
 \label{sec:Sistemi informazionali}
-I decisori dell'azienda (managers etc) richiedono dati strutturati ed elaborati.
+I decisori dell'azienda (ad es. managers, ma talvolta anche stakeholders o altri) richiedono dati strutturati ed elaborati.
 Sono richiesti quindi un database (con tutte le specifiche che abbiamo gi\`a visto) e degli strumenti di analisi dei dati, che si possono dividere in tre tipologie:
 \begin{itemize}
   \item Reporting: producono liste statiche che rappresentano la situazione aziendale in un certo momento; sono strumenti veloci, il cui punto forte \`e l'invarianza nella forma di quello che rappresentano
@@ -13,13 +13,14 @@ Sono richiesti quindi un database (con tutte le specifiche che abbiamo gi\`a vis
   le sue ricerche nei dati
   \item Sistemi di data mining: una funzione di analisi dei dati che, elaborando i dati compresi in un certo intervallo
   di tempo, espone le anomalie che riscontra; il loro punto di forza sta nel fatto che possono trovare anomalie che
-  il decisore non avrebbe trovato. \`E una tecnologia piuttosto costosa
+  il decisore non avrebbe trovato (\`e una tecnologia piuttosto costosa)
 \end{itemize}
-Queste tre categorie sono in ordine di complessit\`a crescente, partendo dalla prima.
+Tali tipologie categorie sono presentate in ordine di complessit\`a crescente.
 
 \subsection{Caratteristiche dei sistemi informazionali}
 \label{sub:Caratteristiche dei sistemi informazionali}
-Finalit\`a
+\subsubsection{Finalit\`a}
+Il sistema informazionale:
 \begin{itemize}
   \item descrive il passato dell'azienda
   \begin{enumerate}
@@ -40,22 +41,18 @@ Ciascuno dei tre elementi appena citati sono in interazione reciproca con cardin
 Lo spazio delle informazioni pu\`o essere visto come insieme di matrici multidimensionali.
 Spesso la matrice \`e denormalizzata. Si privilegia una struttura piana nell'organizzazione dei dati,
 per consentire delle sintesi dei dati pi\`u veloci.\\
-Si viene a produrre un ipercubo. L'elemento $A_{i,j,..}$ \`e un fatto elementare a cui viene associato un valore
-numero che lo quantifica (misura).
-L'iperspazio nell'ipercubo \`e poco popolato, perch\`e i clienti non acquistano tutti i giorni etc..
-
+Si viene a produrre un ipercubo. Il singolo elemento $A_{i,j,..}$ \`e un fatto elementare a cui viene associato un valore
+numerico che lo quantifica (misura).
+L'iperspazio nell'ipercubo \`e poco popolato, perch\`e i clienti non acquistano tutti i giorni, a tutte le ore, a tutti i minuti, in tutti negozi o le sedi e cos\`i via.\\
 Le caratteristiche numeriche elaborate dal modello multidimensionale
-tendono a non avere ambiguit\`a.
-
+tendono a non avere ambiguit\`a.\\
 I fatti elementari da cui estrapoliamo dati quantitativi possono
 comprendere diverse misure. I dati estrapolati vanno poi aggregati
-tramite operatori quali somma, media, max, min..
-
+tramite operatori quali somma, media, max, min..\\
 La dimensione invece rappresenta una delle coordinate dell'iperspazio
-nell'ipercubo. Il dominio della dimensione dev'essere finito. Ad es. il
+nell'iper\-cubo. Il dominio della dimensione dev'essere finito. Esempi di domini possono essere il
 numero dei clienti (nell'ordine delle migliaia tipicamente), il numero
-delle merci (decine di migliaia, tipicamente)..
-
+delle merci (decine di migliaia, tipicamente)..\\
 Le gerarchie (o attributi dimensionali) sono insiemi di attributi
 collegati ad una dimensione, ad es. alla data sono associati ora,
 giorno, mese, anno. Allo stesso modo per i clienti: settori in cui
@@ -97,7 +94,8 @@ funzionali}\label{caratteristiche-funzionali}
   Lo spazio multidimensionale deve ottemperare alle aspettative degli
   utenti (ad es. relative alle dimensioni dei dati)
 \item
-  Correttezza
+  Correttezza\\
+  I dati devono essere corretti
 \item
   Completezza\\
   Il sistema deve essere in grado di rappresentare tutti gli eventi
@@ -107,14 +105,12 @@ funzionali}\label{caratteristiche-funzionali}
 \subsection{Data warehouse}\label{data-warehouse}
 
 Letteralmente, magazzino dei dati. Vi sono memorizzati tutti i fatti e
-le informazioni che possono essere utili all'azienda e che relative alle analisi. 
-Pu\`o raggiungere dimensioni notevoli. I dati sono ``raw'', completi e consistenti.
-
+le informazioni che possono essere utili all'azienda e le relative alle analisi.
+Pu\`o raggiungere dimensioni notevoli. I dati sono "raw", completi e consistenti.\\
 Nell'architettura dei sistemi di data warehousing ogni elemento
 d'archivio \`e legato a un determinato processo. Data warehouse fa parte
-dei dati informazionali. Negli strumenti di analisi dei dati compaiono
-data mining e OLAP (online analytical processing). Alcuni DB integrano
-il sistema OLAP e vengono chiamati MOLAP.
+dei dati informazio\- nali. Negli strumenti di analisi dei dati compaiono
+data mining e OLAP (online analytical processing). Alcuni database integrano il sistema OLAP e vengono chiamati MOLAP.
 
 \begin{itemize}
 
@@ -125,7 +121,7 @@ il sistema OLAP e vengono chiamati MOLAP.
   istanziata nella sua totalit\`a) e non esiste alcuno standard
 \end{itemize}
 
-Alcuni DB relazionali integrano la struttura multidimensionale (ROLAP)
+Alcuni database relazionali integrano la struttura multidimensionale (ROLAP)
 realizzando un modello semi-relazionale.
 
 \begin{itemize}
@@ -150,11 +146,10 @@ preparati per il singolo utente. Se l'utente \`e a livello di direzione
 centrale la panoramica comprender\`a tutti i dati, ma il livello di
 aggregazione sar\`a ben superiore a quello barebone della data warehouse.
 
-\subsection{Ciclo di vita del data
-warehouse}\label{ciclo-di-vita-del-data-warehouse}
+\subsection{Ciclo di vita del data warehouse}\label{ciclo-di-vita-del-data-warehouse}
 
 La costruzione avviene tramite un processo iterativo. Vi sono analisi
-delle sorgenti (dei dati), progettazione concettuale, poi logica e
+delle sorgenti (dei dati), progettazione concettuale, logica e
 implementativa.
 
 Il popolamento dei dati avviene tramite estrazione dei dati dalle
@@ -165,9 +160,8 @@ la warehouse.
 
 \subsection{Analisi OLAP}\label{analisi-olap}
 
-Navigazione interattiva sui dati multidimensionali. \`e l'equivalente per
-l'analisi dei dati del browser per internet (difatti si possono inserire
-bookmark, viene tenuta una history dei passi fatti). Passi:
+Navigazione interattiva sui dati multidimensionali.\\
+\`E l'equivalente per l'analisi dei dati del browser per internet (difatti si possono inserire bookmark, viene tenuta una history dei passi fatti). Passi:
 
 \begin{itemize}
 
@@ -192,15 +186,13 @@ bookmark, viene tenuta una history dei passi fatti). Passi:
 \item
   Le informazioni non sono facilmente identificabili
 \item
-  Insufficiente perch\`e troppo dipendente dai processi deduttivi dei
-  decisori
+  Insufficiente perch\`e troppo dipendente dai processi deduttivi dei decisori
 \end{itemize}
 
 \subsection{Data mining}\label{data-mining}
 
 Identifica tutti quei sistemi che sono in grado di applicare delle
-procedure di analisi dei dati in grado di far emergere delle condizioni
-notevoli, rilevanti. Passi del processo di mining
+procedure di analisi dei dati in grado di far emergere delle condizioni notevoli, rilevanti. Passi del processo di mining:
 
 \begin{itemize}
 
@@ -221,9 +213,8 @@ notevoli, rilevanti. Passi del processo di mining
 \end{itemize}
 
 Si attiva una procedura di scansione dei dati alla ricerca di pattern.
-% Molti mattern potrebbero essere irrilevanti: gli utenti devono
 Molti pattern potrebbero essere irrilevanti: gli utenti devono
-specificare al sistema la direzione in cui ``scavare'' (mining).
+specificare al sistema la direzione in cui "scavare"  (mining).
 
 Abbiamo 5 funzioni di mining:
 
@@ -245,13 +236,11 @@ Abbiamo 5 funzioni di mining:
   tale soggetto assuma comportamenti anomali, ad es. nei preventivi per
   le assicurazioni auto)
 \item
-  analisi dei cluster (cerca i luoghi in cui si addensa l'info, ad es.
-  classi omogenee di soggetti: tipi di prodotti che vengono comprati
+  analisi dei cluster (cerca i luoghi in cui si addensa l'informazione, ad es. classi omogenee di soggetti: tipi di prodotti che vengono comprati
   prevalentemente da un tipo di cliente)
 \item
   analisi degli outlier (cerca i luoghi in cui si verifica la
-  rarefazione l'info, cerco gli elementi che deviano dalle situazioni
-  standard: frodi e altro)
+  rarefazione dell'informazione, cerco gli elementi che deviano dalle situazioni standard: frodi e altro)
 \end{itemize}
 
 \subsection{Campi di applicazione di data mining e
@@ -279,10 +268,8 @@ Fonti di informazioni ulteriori:
 
 \section{Gestione della conoscenza}\label{gestione-della-conoscenza}
 
-Aiuta a esplicitare a livello organizzativo la conoscenza dell'azienda.
-
-Include le tecniche viste fin'ora, che sono solo quantitative. Altri
-strumenti sono
+Aiuta a esplicitare a livello organizzativo la conoscenza dell'azienda.\\
+Include le tecniche viste fin'ora, che sono solo quantitative. Altri strumenti sono:
 
 \begin{itemize}
 

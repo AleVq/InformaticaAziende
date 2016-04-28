@@ -1,11 +1,10 @@
 % !TEX root = ../Informatica e Aziende.tex
 \chapter{Infrastruttura}
 \section{Introduzione}
-Parte dell'infrastruttura \`e hardware, e questa sua concretezza implica che gli investimenti in tecnologia/infrastruttura sono pi\`u accettati (rispetto al software, che essendo astratto viene percepito come meno di valore).
-Dall'altra parte per\`o l'infrastruttura ha una sua parte invisibile (SO, sistemi di gestioni delle comunicazioni) che non viene considerata, o viene data per scontata. Questa parte riceve poca attenzione dall'azienda in quanto non \`e pianificata manutenzione per questa parte dell'infrastruttura.
+Parte dell'infrastruttura \`e hardware, e questa sua concretezza implica che gli investimenti in tecnologia/infrastruttura sono pi\`u accettati dai decisori delle aziende (rispetto al software, che essendo astratto viene percepito come meno di valore).\\
+Dall'altra parte per\`o l'infrastruttura ha una sua parte invisibile (SO, sistemi di gestioni delle comunicazioni) che non viene considerata, o viene data per scontata. Questa parte dell'infrastruttura riceve poca attenzione dall'azienda in quanto non prevede necessariamente processi di manutenzione per essere sostenuta.\\
 L'infrastruttura invecchia pi\`u velocemente di quanto possiamo immaginare (alcune parti pi\`u di altre, ad es. reti e cablaggi sono pi\`u duraturi).
 L'infrastruttura, nel suo complesso, prepara il terreno per l'innovazione.
-
 L'infrastruttura pu\`o essere vista in due modi diversi:
 \begin{itemize}
 \item Insieme di componenti (reti, cablaggi, sistemi di calcolo, sorgenti ed endpoint informativi..)
@@ -21,9 +20,9 @@ L'infrastruttura pu\`o essere vista in due modi diversi:
 
 Si pu\`o parlare di infrastruttura a vari livelli:
 \begin{itemize}
-\item pubblico (connessioni e reti ad ampio raggio, internet, telefoni, mobile)
+\item pubblico (connessioni e reti ad ampio raggio, internet, telefoni, tutto il settore mobile delle telecomunicazioni)
 \item aziendale (reti intranet)
-\item business (infrastruttura di settore, ad es. hw e sw appropriati per un determinato settore)
+\item business (infrastruttura di settore, ad es. hardware e software appropriati per un determinato settore)
 \end{itemize}
 
 
@@ -33,14 +32,19 @@ I cambiamenti possono essere dati da vari fattori:
 \begin{itemize}
 \item miglioramenti nell'efficienza delle tecnologie conosciute
 \item introduzione di nuovi materiali o tecnologie che presentano maggiori performance o maggiore specializzazione (si pensi ai CD tempo fa o agli SSD oggi)
-\item declinazione dello scopo di una tecnologia in scopi diversi, ad es. i computer (con la nascita dei PC lo scopo dei computer \`e cambiato, varie attivit\`a cominciarono a usare i computer per la contabilit\`a e cos\`i via), i cellulari, che da semplici surrogati del telefono fisso, hanno visto un miglioramento tecnologico a livello HW tale da aumentare il numero delle sue funzionalit\`a a tal punto da cambiare il loro scopo (macchina fotografica, riproduttore musicale, terminale di lavoro..)
+\item declinazione dello scopo di una tecnologia in scopi diversi, ad es. i computer (con la nascita dei PC lo scopo dei computer \`e cambiato, varie attivit\`a cominciarono a usare i computer per la contabilit\`a e cos\`i via), i cellulari, che da semplici surrogati del telefono fisso, hanno visto un miglioramento tecnologico a livello hardware tale da aumentare il numero delle sue funzionalit\`a a tal punto da cambiare il loro scopo (macchina fotografica, riproduttore musicale, terminale di lavoro..)
 \item cambio di paradigma, ad es. nel passaggio dai primi computer basati su modello meccanico a quelli basati su modello elettronico (avvenuto negli anni '50).
 \end{itemize}
 
-Questi cambiamenti influenzano le aziende in termini di obsolescenza (nel momento in cui mi rifiuto di seguire i cambiamenti) e opportunit\`a (se riesco ad adattarmi ai cambiamenti che si verificano).
+Questi cambiamenti influenzano le aziende in termini di
+\begin{itemize}
+  \item obsolescenza (nel momento in cui mi rifiuto di seguire i cambiamenti)
+  \item opportunit\`a (se riesco ad adattarmi ai cambiamenti)
+\end{itemize}
 
 \subsection{Controllare i cambiamenti}
-A livello politico si possono definire degli standard, per rendere compatibili prodotti diversi (favorendo l'\textit{interoperabilit\`a} tra produttori diversi), ad es. nell'ambito dei protocolli di comunicazione di rete. La scelta di uno standard pu\`o essere fatta a tavolino o in base a determinati fattori (nel caso del TCP/IP perch\'e fungeva gi\`a da infrastruttura di internet in maniera sistematica quando la scelta dello standard era in discussione, rendendo troppo oneroso il cambiamento a uno standard diverso).
+A livello politico si possono definire degli standard, per rendere compatibili prodotti diversi (favorendo l'\textit{interoperabilit\`a} tra produttori diversi), ad es. nell'ambito dei protocolli di comunicazione di rete.\\
+ La scelta di uno standard pu\`o essere fatta a tavolino o in base a determinati fattori (nel caso del TCP/IP perch\'e si era ormai affermata come infrastruttura di internet in maniera sistematica quando la scelta dello standard era in discussione, rendendo troppo oneroso il cambiamento a uno standard diverso).
 Gli standard vogliono anche limitare la \textit{complessit\`a} nel mondo. \\
 A livello di singoli produttori, si vuole tutelare la \textit{retrocompatibilit\`a}, spesso difficile da mantenere.
 Le aziende posso controllare i cambiamenti
@@ -48,23 +52,27 @@ Le aziende posso controllare i cambiamenti
 \item tramite una grande attenzione alla manutenzione delle proprie infrastrutture affinch\'e non deperiscano
 \item tramite aggiornamenti (che portano talvolta problemi di retrocompatibilit\`a o malfunzionamenti o esclusione dall'update dei sistemi pi\`u vecchi)
 \item tramite investimenti in nuove infrastrutture
-\item tramite revisione o riprogettazione periodica, ad es. il refactoring nel software, non \'e ben visto dalle aziende, costrette ai costi (pi\`u o meno elevati) che considerano spesso aggiuntivi.
+\item tramite revisione o riprogettazione periodica, ad es. il refactoring nel software, che non sono ben viste dalle aziende, costrette ai costi (pi\`u o meno elevati) che considerano spesso uscite vuote, poich\`e non portano direttamente a un aumento del profitto.
 \end{itemize}
 
 \section{Tipi di infrastrutture}
 \subsection{Piattaforme hardware}
 Si distinguono dispositivi di calcolo server e client.\\
-I server forniscono servizi di tipo repository, supporto di gestione dell'attivit\`a di rete, mainframe che supportano virtualizzazioni, computer molto potenti come supercomputer, grid/on demand/edge computing.\\
-I client (personali e dell'azienda, ad es. PC, workstation, mobile devices).\\
-% Accentrando secondo me è sbagliato
-L'uso di device personali porta a un cambiamento delle applicazioni usate nell'aziende, che possono fornire connessioni di tipo terminale remoto, interfacce browser, accentrando il luogo in cui viene effettuata la vera computazione.
+\begin{itemize}
+  \item I server forniscono servizi di tipo repository, supporto di gestione dell'attivit\`a di rete, mainframe che supportano virtualizzazioni, computer molto potenti come supercomputer, grid/on demand/edge computing.
+  \item
+  I client (personali e dell'azienda, ad es. PC, workstation, mobile devices).
+\end{itemize}
+L'uso di device personali porta a un cambiamento delle applicazioni usate nell'aziende, che possono fornire connessioni di tipo terminale remoto, interfacce browser, accentrando il luogo in cui viene effettuata la maggior parte computazione (ad es. in un server o un mainframe).
 \subsection{Periferiche}
 Differenziamo le periferiche che generano dati che l'azienda vuole elaborare, ad es. sensori, controllers, o altro.
-Vi sono periferiche time driven o event driven, periferiche che possono essere programmate o no.
-Nella logistica (d'impresa e di trasporto) vi sono periferiche che controllano oggetti in movimento (scanner di codici a barre etc).
-Vi sono anche sensori di controllo dell'ambiente (sensori di inquinamento, telecamere..) utilizzati nelle aziende.
-Periferiche di archiviazione dati e di output, come stampanti e display.
-Periferiche di rete e comunicazione, a livello di trasporto (cavi, wireless), di infrastruttura (singoli nodi, nodi di conversione, come modem e gateway, nodi distribuiti, come i switch), di servizi (di connessione, come DHCP, controllo di accesso e protezione, come i firewall), di monitoraggio della rete.
+\begin{itemize}
+  \item Vi sono periferiche time-driven o event-driven, periferiche che possono essere programmate o no.
+  \item Nella logistica (d'impresa e di trasporto) vi sono periferiche che controllano oggetti in movimento (scanner di codici a barre etc).
+  \item Vi sono anche sensori di controllo dell'ambiente (sensori di inquinamento, telecamere..) utilizzati nelle aziende.
+  \item Periferiche di archiviazione dati e di output, come stampanti e display.
+  \item Periferiche di rete e comunicazione, a livello di trasporto (cavi, wireless), di infrastruttura (singoli nodi, nodi di conversione, come modem e gateway, nodi distribuiti, come i softwareitch), di servizi (di connessione, come DHCP, controllo di accesso e protezione, come i firewall), di monitoraggio della rete.
+\end{itemize}
 
 \subsection{Software di base}
 \subsubsection{Sistemi Operativi}
@@ -72,50 +80,42 @@ Nelle aziende troveremo principalmente Windows (90\% dei client). Altri SO vengo
 pi\`u che altro in situazioni particolari. \\
 Troveremo invece Linux o Windows in caso di servizi server (nel networking si usa tanto Linux, a livello
 aziendale invece Windows \`e preferito per assistenza, supporto e delegazione delle responsabilit\`a a Microsoft).
-A livello mobile un'app sviluppata a uso esclusivo dell'azienda verr\`a probabilmente scritta
-% Come Chrome? A livello web quello, ma non mobile
-per una singola piattaforma (in questo caso si preferisce Chrome).
+A livello mobile un'app sviluppata a uso esclusivo dell'azienda verr\`a probabilmente scritta per una singola piattaforma (in questo caso si preferisce sviluppare applicazioni per Google Chrome che, a livello mobile, \`e disponibile su tutte le piattaforme mobili pi\`u diffuse: iOS, Android, Windows Phone).
 \subsubsection{Database}
 \label{subs:Database}
-Mantiene tutti quei dati che hanno la carattestica di essere strutturati e usati all'interno
-delle applicazioni.\\
-Nelle aziende i sistemi che ne supportano i processi sono basati su DB relazionali.
-Altri tipi di DB vengono usati solo in casi particolari (ad es. un DB object oriented
-lo si trova a supporto dei CMS, al fine di non vincolare l'utente del CMS a uno specifico paradigma).
-I DB multidimensionali si trovano nelle aziende molto grandi. Sono DB molto particolari, non standardizzati,
-usati nella sintesi di grandi quantit\`a di dati (aziende specializzate in analisi dei dati, ad es.).
-I modelli di DB differiscono per:
+Mantiene tutti quei dati che hanno la caratteristica di essere strutturati e usati all'interno delle applicazioni.\\
+Nelle aziende i sistemi che ne supportano i processi sono basati su database relazionali.
+Altri tipi di database vengono usati solo in casi particolari (ad es. un databse object oriented lo si trova a supporto dei CMS, al fine di non vincolare l'utente del CMS a uno specifico paradigma).
+I database multidimensionali si trovano nelle aziende molto grandi. Sono database molto particolari, non standardizzati, usati nella sintesi di grandi quantit\`a di dati (aziende specializzate in analisi dei dati, ad es.).
+I modelli di database differiscono per:
 \begin{itemize}
-  \item standard (a certi tipi di  DB non sono associati degli standard, perch\`e ancora poco usati)
+  \item standard (a certi tipi di  database non sono associati degli standard, perch\`e ancora poco usati)
   \item diverse opzioni (piattaforme tagliate al minimo essenziale o DBMS con tante funzionalit\`a)
 \end{itemize}
 \subsubsection{Infrastrutture di virtualizzazione}
 \label{subs:Infrastrutture di virtualizzazione}
-Ho SO che si sono evoluti e la mia app \`e supportata per\`o da una versione vecchia del SO.
-Posso avere delle architetture scalabili: posso spostare macchine virtuali attraverso
-varie architetture diverse senza problemi.
-Forniscono un ambiente isolato, supportano applicazioni compatibili con SO obsoleti, \`e facile
-fare back-up.
+Esistono sistemi operativi che si sono evoluti e una determinata app \`e supportata solo da una versione vecchia del sistema operativo.
+Esistono poi delle architetture scalabili, grazie alle quali \`e possibile spostare macchine virtuali attraverso varie architetture diverse senza problemi.
+Forniscono un ambiente isolato, supportano applicazioni compatibili con sistemi operativi obsoleti, rendono facile l'esecuzione di back-up.
 
 
 
 \subsubsection{Tools}
 \label{subs:Tools}
-Vi sono strumenti di networking (browser, email client, groupware) che sono off-the-shelf.
-Vi sono anche le infrastrutture di supporto applicativo: applicazioni che supportano i processi dell'azienda
-e che sono stati sviluppati ad hoc.
+Esistono strumenti di networking (browser, email client, groupware) che sono off-the-shelf (sofware preconfezionato).
+All'opposto vengono prodotte infrastrutture di supporto applicativo: applicazioni che supportano i processi dell'azienda e che sono stati sviluppati ad hoc.
 Da meno di 15 anni si \`e visto che da molti produttori si \`e passati a pochi ma grandi produttori
-(Microsoft, SAP) di tools che sono molto configurabili: il SW non \`e pi\`u personalizzato
+(Microsoft, SAP) di tools che sono molto configurabili: il software non \`e pi\`u personalizzato
 a livello di produzione.
 
 \subsubsection{Gestione dell'Infrastruttura}
 \label{subs:Gestione dell'Infrastruttura}
 Quanto del management dell'infrastruttura pu\`o essere delegato all'esterno?
-Le aziende spendono circa $1/5$ del bugdet per l'instalazione e la gestione dell'infrastruttura
+Le aziende spendono circa $1/5$ del bugdet per l'installazione e la gestione dell'infrastruttura
 per assumere tecnici che si occupino della sua gestione.
 \subsubsection{Costi per il management dell'infrastruttura}
 \label{subs:Costi per il management dell'infrastruttura}
-Nella rendicontazione dell'azienda si vedono i costi per l'acquisto di HW e SW, installazione,
+Nella rendicontazione dell'azienda si vedono i costi per l'acquisto di hardware e software, installazione,
 supporto, ma molti costi sono nascosti (ad es. il tempo di formazione del personale
 all'uso di una nuova infrastruttura). Altri costi nascosti possono essere i side-effect
 dovuti all'uso dell'infrastruttura da parte di personale male istruito.
@@ -126,20 +126,20 @@ un'azienda pu\`o portare all'esterno una buona parte della sua infrastruttura te
 In Italia, il
 \begin{itemize}
 
-\item 40\% delle aziende usa servizi cloud, a partire dalla posta elettronica (piuttosto che
+\item 40\% delle aziende usa servizi cloud, a partire dalla posta elettronica (piut\-tosto che
 usare un server interno all'azienda, coi relativi problemi di sicurezza, consumo..),
 \item 16\% usano software Office sul cloud (Office 365, spinto molto da Microsoft verso le aziende),
 \item 15\% usano servizi di finanza e contabilit\`a (piccole imprese che hanno deciso di ridurre
-la loro complessit\`a interni)
+la loro complessit\`a interna)
 \item 12\% usano cloud storage (specie aziende che fanno ICT, publishing)
 \item 11\% usano il cloud per esternalizzare il sistemi informativo (ad es hosting di server
 nel cloud)
-\item pochi usano per il Customer Relationship Management, sistemi che gestiscono gli interscambi coi clienti
+\item pochi usano per il Customer Relationship Management sistemi che gestiscono gli interscambi coi clienti
 \item pochissimi usano il cloud per avere una grande potenza di calcolo (le aziende ICT non lo usano tendenzialmente).
  \end{itemize}
-Vi sono differenze per\`o nella percetuale di uso del cloud da parte di aziende di produzione vs
+Vi sono differenze per\`o nella percentuale di uso del cloud da parte di aziende di produzione vs
 aziende retail.
-Le aziende pi\`u restie a usare il cloud computing sono quelle che hanno avuto problemi ad accedere
+Le aziende pi\`u rest\`ie a usare il cloud computing sono quelle che hanno avuto problemi ad accedere
 ai propri dati su cloud. Inoltre, il cloud include una cessione di sovranit\`a dei propri dati (vi \`e molta
 diffidenza da parte degli imprenditori): portebbe avvenire una frode (i propri dati vengono violati, pubblicati o altro).
 Non solo, ma anche la non chiarezza sulla giurisdizione e sulle leggi che riguardano la protezione
@@ -156,4 +156,4 @@ L'azienda deve decidere
 Quando un'azienda vuole sviluppare un'applicazione, bisognerebbe usare la tecnica del prototyping:
 testare un prototipo prima di adottarlo.
 Questo tipo di politica andrebbe usata anche in altre situazioni, ad es. quando viene acquistato un
-nuovo computer con un nuovo SO: il sistema potrebbe cedere se fatto girare sul nuovo SO?
+nuovo computer con un nuovo sistema operativo: il sistema potrebbe cedere se fatto girare sul nuovo sistema?

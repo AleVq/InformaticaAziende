@@ -156,7 +156,7 @@ pythontex-files-*/
 *.fff
 
 # Latexian
-TSWLatexianTemp*
+TsoftwareLatexianTemp*
 .DS_Store
 
 # Markdown
