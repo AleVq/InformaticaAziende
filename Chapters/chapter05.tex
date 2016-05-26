@@ -23,7 +23,11 @@ effettuati con cadenze prefissate.\\
 Dato un ordine, voglio poter elaborare dei dati per riuscire a comunicare al cliente i tempi di attesa previsti. Tali dati possono essere:
 \begin{itemize}
   \item Giacenza (del prodotto in magazzino), allocazioni (ordini gi\`a effettuati dai clienti).
-  Se giacenza - allocazioni $<$ 0, allora non sono presenti sufficienti scorte in stock e si rende necessario produrre nuovi lotti dell'oggetto richiesto dal cliente: a questo punto, l'allungamento dei tempi dipende da:
+  Se 
+  $$
+   giacenza - allocazioni < 0
+  $$
+  allora non sono presenti sufficienti scorte in stock e si rende necessario produrre nuovi lotti dell'oggetto richiesto dal cliente: a questo punto, l'allungamento dei tempi dipende da:
   \begin{enumerate}
     \item tempo, macchine, persone
     \item tempo di attrezzaggio della macchina
