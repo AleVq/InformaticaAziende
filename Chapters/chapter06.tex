@@ -1,6 +1,5 @@
 % !TEX root = ../Informatica e Aziende.tex
-\chapter{Business e management}
-\label{chap:Business e management}
+\chapter{Sistemi a supporto delle decisioni}
 
 \section{Sistemi informazionali}
 \label{sec:Sistemi informazionali}
@@ -15,7 +14,7 @@ Sono richiesti quindi un database (con tutte le specifiche che abbiamo gi\`a vis
   di tempo, espone le anomalie che riscontra; il loro punto di forza sta nel fatto che possono trovare anomalie che
   il decisore non avrebbe trovato (\`e una tecnologia piuttosto costosa)
 \end{itemize}
-Tali tipologie categorie sono presentate in ordine di complessit\`a crescente.
+Tali tipologie sono presentate in ordine di complessit\`a crescente.
 
 \subsection{Caratteristiche dei sistemi informazionali}
 \label{sub:Caratteristiche dei sistemi informazionali}
@@ -65,7 +64,8 @@ strutturali}\label{caratteristiche-strutturali}
 \begin{itemize}
 
 \item
-  Multidimensionalit\`a
+  Multidimensionalit\`a\\
+  Accesso alle informazioni via n-uple di coordinate
 \item
   Granularit\`a\\
   Grado minimo di aggregazione dei dati, corrispondente a un fatto
@@ -92,7 +92,7 @@ funzionali}\label{caratteristiche-funzionali}
 \item
   Flessibilit\`a e sintesi\\
   Lo spazio multidimensionale deve ottemperare alle aspettative degli
-  utenti (ad es. relative alle dimensioni dei dati)
+  utenti (ad es. relativamente alle dimensioni dei dati)
 \item
   Correttezza\\
   I dati devono essere corretti
@@ -109,8 +109,8 @@ le informazioni che possono essere utili all'azienda e le relative alle analisi.
 Pu\`o raggiungere dimensioni notevoli. I dati sono \textbf{raw}, completi e consistenti.\\
 Nell'architettura dei sistemi di data warehousing ogni elemento
 d'archivio \`e legato a un determinato processo. Data warehouse fa parte
-dei dati informazio\- nali. Negli strumenti di analisi dei dati compaiono
-data mining e OLAP (online analytical processing). Alcuni database integrano il sistema OLAP e vengono chiamati MOLAP.
+dei dati informazionali. Negli strumenti di analisi dei dati compaiono
+data mining e OLAP (online analytical processing). Alcuni database integrano il sistema OLAP tramite matrici multidimensionali: vengono chiamati MOLAP (multidimensional OLAP).
 
 \begin{itemize}
 
@@ -176,7 +176,7 @@ Navigazione interattiva sui dati multidimensionali.\\
   dice (filtro i fatti elementari per identificare un sottospazio
   dell'iperspazio)
 \item
-  pivot (cambio del punto di vista)
+  pivot (cambio del punto di vista: inverte la relazione tra le dimensioni, realizzando una rotazione del cubo nell'analisi)
 \end{itemize}
 
 \subsubsection{Limiti di OLAP}\label{limiti-di-olap}
@@ -214,7 +214,7 @@ procedure di analisi dei dati in grado di far emergere delle condizioni notevoli
 
 Si attiva una procedura di scansione dei dati alla ricerca di pattern.
 Molti pattern potrebbero essere irrilevanti: gli utenti devono
-specificare al sistema la direzione in cui "scavare"  (mining).
+specificare al sistema la direzione in cui "scavare"  (OLAM, online analytical mining).
 
 Abbiamo 5 funzioni di mining:
 
