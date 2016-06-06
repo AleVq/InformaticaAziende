@@ -1,20 +1,19 @@
 % !TEX root = ../Informatica e Aziende.tex
-\chapter{Sistemi a supporto delle decisioni}
+\chapter{Business Intelligence}
 
 \section{Sistemi informazionali}
 \label{sec:Sistemi informazionali}
 I decisori dell'azienda (ad es. managers, ma talvolta anche stakeholders o altri) richiedono dati strutturati ed elaborati.
-Sono richiesti quindi un database (con tutte le specifiche che abbiamo gi\`a visto) e degli strumenti di analisi dei dati, che si possono dividere in tre tipologie:
+Sono richiesti quindi strumenti come i DBMS (con tutte le specifiche che abbiamo gi\`a visto) e strumenti di analisi dei dati, che fanno parte dei cosiddetti sistemi informazionali o di \bf business intelligence\rm\footnote{Disciplina che consente a chi deve decidere in azienda di capire, attraverso soluzioni software, i fattori chiave del business e conseguentemente di prendere le migliori decisioni in quel momento specifico. Si parla di piattaforma di business intelligence per enfatizzarne la natura multiforme: essa infatti si compone di strumenti diversificati quali hardware dedicato, infrastrutture di rete, DBMS, software di front-end e back-end} e che si possono dividere in tre tipologie:
 \begin{itemize}
   \item Reporting: producono liste statiche che rappresentano la situazione aziendale in un certo momento; sono strumenti veloci, il cui punto forte \`e l'invarianza nella forma di quello che rappresentano
   \item Sistemi di analisi interattiva guidata da ipotesi: di fronte a eventi imprevisti, il decisore parte dai report
   e cerca anomalie che giustifichino l'evento imprevisto formulando una certa ipotesi che guida
   le sue ricerche nei dati
-  \item Sistemi di data mining: una funzione di analisi dei dati che, elaborando i dati compresi in un certo intervallo
-  di tempo, espone le anomalie che riscontra; il loro punto di forza sta nel fatto che possono trovare anomalie che
-  il decisore non avrebbe trovato (\`e una tecnologia piuttosto costosa)
+  \item Sistemi di data mining: una funzione di analisi dei dati che, elaborando i dati compresi in un certo intervallo di tempo, espone le anomalie che riscontra; il loro punto di forza sta nel fatto che possono trovare anomalie che il decisore non avrebbe trovato (\`e una tecnologia piuttosto costosa)
 \end{itemize}
-Tali tipologie sono presentate in ordine di complessit\`a crescente.
+Tali tipologie sono presentate in ordine di complessit\`a crescente.\\
+
 
 \subsection{Caratteristiche dei sistemi informazionali}
 \label{sub:Caratteristiche dei sistemi informazionali}
@@ -32,26 +31,36 @@ Il sistema informazionale:
   \end{enumerate}
   \item \textbf{prevede} il futuro tramite elaborazione dei dati
 \end{itemize}
-\subsection{Modello multidimensionale}
-\label{sub:Modello multidimensionale}
+
 Nei sistemi di analisi ai fini di supporto alle decisioni, il modello dei dati adottato
 \`e di tipo multidimensionale: le informazioni sono articolate intorno a soggetti, fatti/eventi e misure.
 Ciascuno dei tre elementi appena citati sono in interazione reciproca con cardinali\`a 1-1 o anche 1-n.
-Lo spazio delle informazioni pu\`o essere visto come insieme di matrici multidimensionali.
-Spesso la matrice \`e denormalizzata. Si privilegia una struttura piana nell'organizzazione dei dati,
+Lo spazio delle informazioni \`e organizzato come insieme di matrici multidimensionali.
+
+\subsection{Modello multidimensionale}
+\`E il fondamento per la rappresentazione e l'interrogazione dei dati nei data warehouse.
+I fatti di interesse sono rappresentati in cubi in cui:
+\begin{itemize}
+	\item ogni cella contiene misure numeriche che quantificano il fatto da diversi punti di vista
+	\item ogni asse rappresenta una dimensione di interesse per l'analisi
+	\item ogni dimensione pu\`o essere la radice di una gerarchia di attributi usati per aggregare i dati memorizzati nei cubi base
+\end{itemize}
+Spesso tale matrice \`e denormalizzata\footnote{Nel modello dei DB relazionali vengono effettuati complessi raggruppamenti di dati per minimizzare la ridondanza dei dati e sovrabbondanti relazioni molti-a-molti. Il processo che consiste nel creare strutture dati che siamo piccole, stabili, flessibili e adattabili partendo da complessi raggruppamenti di dati prende il nome di \bf normalizzazione\rm}: si preferisce che la matrice includa tutti i dati raccolti per poterli aggregare in seguito.\\
+Si privilegia una struttura piana nell'organizzazione dei dati,
 per consentire delle sintesi dei dati pi\`u veloci.\\
-Si viene a produrre un ipercubo. Il singolo elemento $A_{i,j,..}$ \`e un fatto elementare a cui viene associato un valore
+Tra tutte le matrici multidimensionali possibili, il modello standard utilizzato prevalentemente \`e l'ipercubo. \\
+Il singolo elemento $A_{i,j,k}$ \`e un fatto elementare a cui viene associato un valore
 numerico che lo quantifica (misura).
+Riassumendo, per costruire un ipercubo \`e necessario identificare:
+\begin{itemize}
+	\item I fatti elementari, ognuno dei quali corrisponder\`a a una coordinata dell'ipercubo 
+	\item Misure numeriche, che quantificano il fatto elementare
+	\item Dimensioni, le coordinate di ciascun elemento: il dominio della dimensione dev'essere finito (esempi di domini possono essere il numero dei clienti (nell'ordine delle migliaia tipicamente), il numero	delle merci (decine di migliaia, tipicamente)..)
+\end{itemize} 
 L'iperspazio nell'ipercubo \`e poco popolato, perch\`e i clienti non acquistano tutti i giorni, a tutte le ore, a tutti i minuti, in tutti negozi o le sedi e cos\`i via.\\
 Le caratteristiche numeriche elaborate dal modello multidimensionale
 tendono a non avere ambiguit\`a.\\
-I fatti elementari da cui estrapoliamo dati quantitativi possono
-comprendere diverse misure. I dati estrapolati vanno poi aggregati
-tramite operatori quali somma, media, max, min..\\
-La dimensione invece rappresenta una delle coordinate dell'iperspazio
-nell'iper\-cubo. Il dominio della dimensione dev'essere finito. Esempi di domini possono essere il
-numero dei clienti (nell'ordine delle migliaia tipicamente), il numero
-delle merci (decine di migliaia, tipicamente)..\\
+I dati estrapolati andranno poi aggregati tramite operatori quali somma, media, max, min..\\
 Le gerarchie (o attributi dimensionali) sono insiemi di attributi
 collegati ad una dimensione, ad es. alla data sono associati ora,
 giorno, mese, anno. Allo stesso modo per i clienti: settori in cui
