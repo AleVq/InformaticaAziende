@@ -1,5 +1,8 @@
 % !TEX root = ../Informatica e Aziende.tex
 \chapter{Sicurezza}
+\section{Definizione}
+Nello standard \it ISO/IEC 27000 \rm la sicurezza delle informazioni \`e cos\`i definita:\\
+\it Information Security: preservation of confidentiality, integrity and availability of information (ISO/IEC 27000).\rm
 
 \section{Vulnerabilit\`a}
 
@@ -16,15 +19,15 @@ In termini di sicurezza l'azienda ha bisogno di garantire:
 \item
   Riservatezza dei dati
 \end{itemize}
-
-\subsection{Fonti di rischio per l'azienda}
+\section{Fonti di rischio per l'azienda}
+\subsection{Eventi non intenzionali}
 
 \begin{itemize}
 
 \item
   Eventi accidentali (naturali), a cui spesso le aziende non pensano
 \item
-  Interruzioni di servizi esterni (ad es. il mio SI non \`e utilizzabile
+  Interruzioni di servizi esterni (ad es. il SI non \`e utilizzabile
   perch\'e alcuni servizi di terzi a cui l'azienda si appoggia non sono
   temporaneamente disponibili)
 \item
@@ -33,7 +36,7 @@ In termini di sicurezza l'azienda ha bisogno di garantire:
   Bug software
 \end{itemize}
 
-\subsection{Vi sono anche eventi causati intenzialmente da persone}
+\subsection{Eventi causati intenzialmente da persone}
 
 \begin{itemize}
 
@@ -69,8 +72,7 @@ In termini di sicurezza l'azienda ha bisogno di garantire:
   Cause giudiziarie per mancanza di protezione dei dati dei clienti
 \end{itemize}
 
-\subsection{Strategie per migliorare la
-sicurezza}
+\section{Strategie per migliorare la sicurezza}
 
 \begin{itemize}
 
@@ -85,33 +87,25 @@ sicurezza}
   Investimento in formazione
 \end{itemize}
 
-C'\`e da attivare un'attivit\`a di controllo e nominare un responsabile della 
-sicurezza, ovvero chi si fa carico della responsabilit\`a della sicurezza.
+\`E necessario attivare un'attivit\`a di controllo e nominare un responsabile della sicurezza, ovvero chi si fa carico della responsabilit\`a della sicurezza.
 
-Tutto ci\'o porta dei costi -certi- che non \`e sicuro portino a dei
-guadagni.\\
-Inoltre si aumentano le attivit\`a di controllo, la burocrazia interna, i
-vincoli che gli utenti del SI devono rispettare, la complessit\`a del
-sistema.\\
-Molte aziende sono restie a investire somme importanti per la
-sicurezza.
-
+Tutto ci\'o porta dei costi -certi- che non \`e sicuro portino a dei guadagni.\\
+Inoltre si aumentano le attivit\`a di controllo, la burocrazia interna, i vincoli che gli utenti del SI devono rispettare, la complessit\`a del sistema.\\
+Il rischio pi\`u grande \`e dato dal fatto che molte aziende sono quindi restie a investire somme importanti per la sicurezza.
 Cosa spinge un'azienda a investire sulla sicurezza?
 
 \begin{itemize}
 
 \item
   Un manager \emph{consapevole} dei rischi in relazione al ruolo dell'IT
-  nell'azienda.\\
+  nell'azienda.
 \item
   Obblighi di mercato sulla certificazione della qualit\`a attraverso il
   rispetto di standard di sicurezza quali ISO 27001 e 27002
 \item
-  Obblighi di legge: trattamento dei dati personali (legge 196/2003),
-  fondamentali ad es. nelle aziende sanitarie
+  Obblighi di legge: trattamento dei dati personali (legge 196/2003), fondamentali ad es. nelle aziende sanitarie
 \item
-  Obblighi di legge: norme specifiche per ambienti specifici (ad es.
-  nelle istituzioni pubbliche
+  Obblighi di legge: norme specifiche per ambienti specifici (ad es. nelle istituzioni pubbliche
 \end{itemize}
 Il trattamento della sicurezza \`e un \emph{processo} aziendale. Non parte
 se non vi \`e un impegno forte da parte del management aziendale.\\
@@ -139,11 +133,9 @@ determinano:
 \item
   Procedure di intervento in caso di anomalia
 \item
-  Audit periodici esterni (ogni 1,2 anni una societ\`a esterna che entra
-  in azienda e con uno sguardo obiettivo valuta il sistema)
+  Audit periodici esterni (ogni 1,2 anni una societ\`a esterna entra in azienda e con uno sguardo obiettivo valuta il sistema)
 \item
-  Intervallo di revisione (mantiene la complessit\`a dei sistemi bassa,
-  aggiorna gli apparati..)
+  Intervallo di revisione (mantiene la complessit\`a dei sistemi bassa, aggiorna gli apparati..)
 \end{itemize}
 
 \subsection{Ambiti di tutela}
@@ -176,21 +168,61 @@ backup dei dati.
 
 \subsection{Cultura della sicurezza}
 
-Bisogna definire un Regolamento Informatico Aziendale: ovvero un documento
+Bisogna definire un \bf Regolamento Informatico Aziendale\rm: ovvero un documento
 redatto dall'azienda e sottoscritto da tutte le persone che operano al suo
 interno sui sistemi informatici. Serve a specificare le regole che devono
 essere rispettate all'interno dell'azienda con riferimento al settore
-informatico.
+informatico: ad esempio nell'uso di PC e dispositivi mobile, della rete internet, della posta elettronica, nell'osservanza delle disposizioni in materia di privacy e cos\`i via.
 
-\subsection{Linee guida ISO 27001/27002}
+\section{Linee guida ISO 27001/27002}
 
 L'ISO 27001 definisce delle linee guida di riferimento mentre l'ISO 27002
-specifica un elenco di misure di sicurezza. Quest ultimo indica un approccio
+specifica un elenco di misure di sicurezza. Quest'ultimo indica un approccio
 metodologico alla sicurezza aziendale.
 
 Il personale ha bisogno di essere formato, per essere in grado di capire quali
 azioni potrebbero portare a un rischio o semplicemente a una diminuzione di
 sicurezza.
 
-\subsection{Linee guida sulla continuit\`a operativa nelle PA}
-Consistono in un documento estremamente regolato che norma le pratiche relative alla Digitalizzazione dei processi della Pubbliche Amministrazioni italiane.
+\subsection{Linee guida}
+\subsubsection{Analisi dei rischi}
+\begin{itemize}
+	\item Definire i requisiti di sicurezza: tali requisiti sono determinati dal contesto in cui l'azienda svolge la sua attivit\`a, dalle normativi, dagli obblighi contrattuali e quindi dalle porzioni del sistema informatico soggette da tali obblighi
+	\item Analisi dei rischi
+	\item Identificazione delle opzioni per il trattamento dei rischi
+	\item Scelta degli obiettivi di controllo per il trattamento dei rischi
+	\item Ottenere l’approvazione della direzione circa i rischi residui proposti
+\end{itemize}
+\subsubsection{Documentare le attivit\`a}
+Il sistema aziendale che si occupa della gestione della sicurezza \`e definito nell'ISO 27001 come SGSI: \bf Sistema di gestione della sicurezza informatica\rm.
+Un'azienda deve dichiarare:
+\begin{itemize}
+	\item Le politiche relative all'SGSI
+	\item Il campo di applicazione del SGSI
+	\item Le procedure e i controlli a supporto del SGSI
+	\item Metodologie e rapporto dela valutazione del rischio
+	\item Procedure di pianificazione, operativit\`a, misurazione dell'efficacia dei controlli e processi di sicurezza delle informazioni
+\end{itemize}
+L'azienda deve inoltre registrare interventi sul sistema ed eventi rilevanti, ad es. un breach nel sistema.
+\subsubsection{Formare il personale, attribuire responsabilit\`a}
+L'azienda deve identificare le responsabilit\`a del personale relative al SGSI.\\
+Coloro che sono responsabili del SGSI deve avere le competenze per poter svolgere i suoi compiti: devono quindi essere previsti corsi di formazione, valutazione e registrazione di corsi, addstramenti, abilit\`a, esperienze e qualifiche del personale.
+\subsubsection{Revisione periodica}
+Il SGSI deve essere periodicamente revisionati per assicurarne l'idoneit\`a. La valutazione del SGSI deve includere l'identificazione dei cambiamenti necessari e le possibili opportunit\`a di miglioramento.
+\section{Linee guida sulla continuit\`a operativa nelle PA}
+Consistono in un documento estremamente regolato che norma le pratiche relative alla Digitalizzazione dei processi della Pubbliche Amministrazioni italiane.\\
+Tale documento non tratta solo di rischi relativi all’infrastruttura informatica, ma anche dell’infrastruttura che la sostiene: i sistemi elettrico, antincendio, antintrusione, cos\`i come le strutture e l'ubicazione dei data center.\\
+Il documento fornisce anche strumenti di autovalutazione, per identificare il livello di continuit\`a atteso per ogni servizio.
+\subsection{Autovalutazione}
+Sono fornite tre direttrici di analisi:
+\begin{itemize}
+	\item Servizio\\
+			In base alla tipologia, numerosit\`a e criticit\`a dei servizi erogati, si valutano i potenziali danni per l'organizzazione o per i suoi utenti in caso di mancata erogazione.\\
+			Ad es.: tipi di utenti e dati trattati, frequenza di erogazione del servizio, possibilit\`a di recuperare i dati (da un sistema di backup ad esempio)..
+	\item Organizzazione\\
+			In base alla complessit\`a amministrativa e strutturale dell'organizzazione si suggerisce un determinato dimensionamento delle soluzioni tecnologiche da adottare\\
+			Ad es.: numero di sedi, di responsabili del trattamento dei dati, dei trattamenti censiti, degli addetti all'erogazione dei servizi..
+	\item Tecnologia\\
+			In base alle dimensioni e complessit\`a del fattore tecnologico si suggeriscono determinate tipologie e natura delle soluzioni da adottare\\
+			Ad es.: presenza di un dipartimento IT, numerosit\`a degli addetti IT, numero di server, di postazioni di lavoro, di archivi usati..
+\end{itemize}
